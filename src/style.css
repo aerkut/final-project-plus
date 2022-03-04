@@ -1,0 +1,13 @@
+.currentWeather {
+  font-size: larger;
+  margin: 20px;
+}
+#city {
+  font-weight: bolder;
+}
+.col {
+  margin: 20px;
+}
+#city-input {
+  margin: 0 30px 30px 0px;
+}
