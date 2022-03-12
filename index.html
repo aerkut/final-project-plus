@@ -16,83 +16,85 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ayse's weather search engine</h1>
-      <form id="search-form">
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            id="city-input"
-            aria-describedby="emailHelp"
-            autocomplete="off"
-            autofocus="on"
-            placeholder="Enter city."
-          />
-          <button type="submit" class="btn btn-primary" id="search-button">
-            Search
-          </button>
-          <button type="click" class="btn btn-primary" id="current-button">
-            Current Location
-          </button>
+      <div class="weather-app">
+        <h1>Ayse's weather search engine</h1>
+        <form id="search-form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="city-input"
+              aria-describedby="emailHelp"
+              autocomplete="off"
+              autofocus="on"
+              placeholder="Enter city."
+            />
+            <button type="submit" class="btn btn-primary" id="search-button">
+              Search
+            </button>
+            <button type="click" class="btn btn-primary" id="current-button">
+              Current Location
+            </button>
+          </div>
+        </form>
+        <div class="currentWeather">
+          <div id="city">Zurich, Switzerland</div>
+          <div class="time"></div>
+          <div class="description"></div>
+          <br />
+          <span class="temperature">8</span>
+          <span class="units">°C </span>
         </div>
-      </form>
-      <div class="currentWeather">
-        <div id="city">Zurich, Switzerland</div>
-        <div class="time"></div>
-        <div class="description"></div>
-        <br />
-        <span class="temperature">8</span>
-        <span class="units">°C </span>
+        <div class="row">
+          <div class="col">
+            Monday <br />
+            🌨️Snow
+
+            <br />
+
+            4°C
+          </div>
+          <div class="col">
+            Tuesday <br />
+            ☀️Sun
+
+            <br />
+
+            7°C
+          </div>
+          <div class="col">
+            Wednesday <br />
+
+            ☀️Sun
+
+            <br />
+
+            8°C
+          </div>
+          <div class="col">
+            Thursday <br />
+
+            ☁️Clouds
+
+            <br />
+
+            8°C
+          </div>
+          <div class="col">
+            Friday <br />
+
+            🌨️Snow <br />
+
+            1°C
+          </div>
+        </div>
+        <footer>
+          <a href="https://github.com/aerkut/final-project-plus" target="_blank"
+            >Open source code</a
+          >
+          by Ayse Erkut
+        </footer>
       </div>
-      <div class="row">
-        <div class="col">
-          Monday <br />
-          🌨️Snow
-
-          <br />
-
-          4°C
-        </div>
-        <div class="col">
-          Tuesday <br />
-          ☀️Sun
-
-          <br />
-
-          7°C
-        </div>
-        <div class="col">
-          Wednesday <br />
-
-          ☀️Sun
-
-          <br />
-
-          8°C
-        </div>
-        <div class="col">
-          Thursday <br />
-
-          ☁️Clouds
-
-          <br />
-
-          8°C
-        </div>
-        <div class="col">
-          Friday <br />
-
-          🌨️Snow <br />
-
-          1°C
-        </div>
-      </div>
-      <footer>
-        <a href="https://github.com/aerkut/final-project-plus"
-          >Open source code</a
-        >
-        by Ayse Erkut
-      </footer>
     </div>
 
     <script src="src/file.js"></script>
