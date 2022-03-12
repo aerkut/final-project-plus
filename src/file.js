@@ -38,7 +38,9 @@ function displayWeather(response) {
   );
   document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
-  document.querySelector(".windSpeed").innerHTML = response.data.wind.speed;
+  document.querySelector(
+    ".windSpeed"
+  ).innerHTML = `((response.data.wind.speed)* (60*60)/1000)km/h`;
 }
 function searchCity(event) {
   event.preventDefault();
