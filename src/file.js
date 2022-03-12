@@ -18,7 +18,7 @@ function formatDate(date) {
   if (currentMinute < 10) {
     currentMinute = `0${currentMinute}`;
   }
-  let currentDate = `${currentDay}, ${currentHour}:${currentMinute}`;
+  let currentDate = `Last updated on ${currentDay}, ${currentHour}:${currentMinute}`;
   return currentDate;
 }
 let time = document.querySelector(".time");
