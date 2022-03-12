@@ -1,3 +1,10 @@
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
 .currentWeather {
   font-size: larger;
   margin: 20px;
