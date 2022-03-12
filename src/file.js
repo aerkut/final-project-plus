@@ -42,7 +42,10 @@ function displayWeather(response) {
     (response.data.wind.speed * (60 * 60)) / 1000;
   document
     .querySelector("#icon")
-    .setAttribute("src", `http://openweathermap.org/img/wn/10d@2x.png`);
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather.icon}@2x.png`
+    );
 }
 function searchCity(event) {
   event.preventDefault();
