@@ -5,6 +5,11 @@
   border: 1px solid gray;
   border-radius: 10px;
 }
+footer {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
 .currentWeather {
   font-size: larger;
   margin: 20px;

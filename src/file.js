@@ -55,7 +55,7 @@ function displayForecast(response) {
               
               <img src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
-              }@2x.png" alt="" width="45">Snow
+              }@2x.png" alt="" width="45">
               <div class="weather-forecast-temp"><span class="weather-forecast-max">${Math.round(
                 forecastDay.temp.max
               )}°</span>|<span class="weather-forecast-min">${Math.round(
@@ -114,12 +114,7 @@ function retrievePosition(position) {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(url).then(displayWeather);
 }
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
+
 function displayCelsiusTemp(event) {
   event.preventDefault();
   let celsiusTemp = celsiusTemperature;
@@ -127,12 +122,6 @@ function displayCelsiusTemp(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
 navigator.geolocation.getCurrentPosition(retrievePosition);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
