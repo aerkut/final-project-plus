@@ -24,6 +24,25 @@ function formatDate(date) {
 let time = document.querySelector(".time");
 time.innerHTML = formatDate(currentTime);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" width="45">Snow
+              <div class="weather-forecast-temp"><span class="weather-forecast-max">4°C</span>|<span class="weather-forecast-min">2°C</span></div>
+            </div>
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function search(event) {
   event.preventDefault();
   let cityElement = document.querySelector("#city");
@@ -77,6 +96,7 @@ function displayCelsiusTemp(event) {
 }
 
 let celsiusTemperature = null;
+
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
@@ -84,5 +104,6 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 navigator.geolocation.getCurrentPosition(retrievePosition);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
+displayForecast();
 let currentLocation = document.querySelector("#current-button");
 currentLocation.addEventListener("click", retrievePosition);
