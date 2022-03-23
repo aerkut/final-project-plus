@@ -1,7 +1,10 @@
+body {
+  background: #ffe4cc;
+}
 .weather-app {
   margin: 30px 0px 0px 0px;
   padding: 20px;
-  border: 1px solid gray;
+  border: 1px solid #98897b;
   border-radius: 10px;
   background: radial-gradient(
     circle at 10% 20%,
