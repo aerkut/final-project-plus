@@ -1,14 +1,58 @@
 .weather-app {
-  max-width: 800px;
-  margin: 30px auto;
+  margin: 30px 0px 0px 0px;
   padding: 20px;
   border: 1px solid gray;
   border-radius: 10px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 252, 214) 0%,
+    rgba(255, 102, 102, 0.44) 90%
+  );
+  font-family: "Quicksand", sans-serif;
 }
-footer {
-  max-width: 800px;
+#search-button {
+  background: #ffbcbc;
+  border: #ffbcbc;
+  color: black;
+  font-weight: bolder;
+}
+#current-button {
+  background: #ffbcbc;
+  border: #ffbcbc;
+  color: black;
+  font-weight: bolder;
+}
+.temperature {
+  font-size: 16px;
+}
+.units {
+  font-size: 16px;
+}
+.description {
+  font-size: 16px;
+}
+.windSpeed {
+  font-size: 16px;
+}
+.weather-forecast {
   margin: 30px auto;
   padding: 20px;
+}
+.weather-forecast-date {
+  font-weight: bolder;
+  margin: 0 auto;
+}
+.weather-forecast-temp {
+  margin: 0 auto;
+  font-weight: bolder;
+}
+.weather-forecast-min {
+  opacity: 0.6;
+}
+footer {
+  margin: 0 auto;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
 }
 .currentWeather {
   font-size: larger;
@@ -21,7 +65,7 @@ footer {
   font-size: small;
 }
 .col {
-  margin: 30px;
+  margin: 0 auto;
   padding: 10px;
 }
 #city-input {

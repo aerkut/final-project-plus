@@ -26,15 +26,7 @@ time.innerHTML = formatDate(currentTime);
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[date.getDay()];
   return day;
 }
@@ -58,7 +50,7 @@ function displayForecast(response) {
               }@2x.png" alt="" width="45">
               <div class="weather-forecast-temp"><span class="weather-forecast-max">${Math.round(
                 forecastDay.temp.max
-              )}°</span>|<span class="weather-forecast-min">${Math.round(
+              )}°</span> <span class="weather-forecast-min">${Math.round(
           forecastDay.temp.min
         )}°</span></div>
             </div>
@@ -107,7 +99,11 @@ function searchCity(event) {
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayWeather);
 }
-function retrievePosition(position) {
+function retrievePosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(retrieveCurrentPosition);
+}
+function retrieveCurrentPosition(position) {
   let apiKey = "c0f23c2af89da48c0615f7a3012794ef";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -121,8 +117,7 @@ function displayCelsiusTemp(event) {
   let temperatureElement = document.querySelector(".temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
-
-navigator.geolocation.getCurrentPosition(retrievePosition);
+navigator.geolocation.getCurrentPosition(retrieveCurrentPosition);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 let currentLocation = document.querySelector("#current-button");
